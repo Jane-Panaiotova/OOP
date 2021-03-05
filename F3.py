@@ -182,7 +182,7 @@ class Call:
 
 
 sum = Call()
-print(sum(6, 12))
+print(total(6, 12))
 
 #12*. Making Your Objects Truthy or Falsey Using __bool__().
 # Create class MyOrder with cart and customer instance attributes.
