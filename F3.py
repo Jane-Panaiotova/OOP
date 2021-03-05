@@ -19,13 +19,18 @@ car.print_vehicle()
 class Bus(Vehicle):
 
     def __init__(self, max_speed, mileage, sitting_capacity):
+        super().__init__(max_speed, mileage)
         self.sitting_capacity = sitting_capacity
         self.max_speed = max_speed
         self.mileage = mileage
-        super().__init__(max_speed, mileage)
+        
+    def seat_capacity(self, sitting_capacity):
+        self.sitting_capacity = sitting_capacity
+     
 
     def seating(self):
         print(f'A bus has {self.sitting_capacity} seating.')
+       
 
 
 bus = Bus('160 km/h', '3000 km', 45)
@@ -65,11 +70,8 @@ class SchoolBus(School, Bus):
 
     def __init__(self, get_school_id, number_of_students, max_speed, mileage, sitting_capacity,
                  bus_school_color):
-        self.get_school_id = get_school_id
-        self.number_of_students = number_of_students
-        self.max_speed = max_speed
-        self.mileage = mileage
-        self.sitting_capacity = sitting_capacity
+        School.__init__(self, get_school_id, number_of_students)
+        Bus.__init__(self, max_speed, mileage, sitting_capacity)
         self.bus_school_color = bus_school_color
 
     def bus_color(self):
