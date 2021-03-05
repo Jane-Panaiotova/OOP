@@ -21,8 +21,6 @@ class Bus(Vehicle):
     def __init__(self, max_speed, mileage, sitting_capacity):
         super().__init__(max_speed, mileage)
         self.sitting_capacity = sitting_capacity
-        self.max_speed = max_speed
-        self.mileage = mileage
         
     def seat_capacity(self, sitting_capacity):
         self.sitting_capacity = sitting_capacity
