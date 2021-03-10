@@ -126,14 +126,14 @@ class Concert:
 
     @property
     def visitors_count(self):
-        return self.visitors_count
+        return self._visitors_count
 
     @visitors_count.setter
     def visitors_count(self, visitors_count):
-        if self.visitors_count > self.max_visitor_num:
+        if visitors_count > self.max_visitor_num:
             self._visitors_count = self.max_visitor_num
         else:
-            self._visitors_count = self.visitors_count
+            self._visitors_count = visitors_count
 
 
 Concert.max_visitor_num = 50
