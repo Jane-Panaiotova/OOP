@@ -4,7 +4,7 @@ import unittest
 import names
 
 
-class login(unittest.TestCase):
+class Login(unittest.TestCase):
     def setUp(self):
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument("--incognito")
